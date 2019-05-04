@@ -1,0 +1,66 @@
+{
+  "name": "deck.gl",
+  "description": "A suite of 3D-enabled data visualization overlays, suitable for react-map-gl",
+  "license": "MIT",
+  "private": "true",
+  "keywords": [
+    "webgl",
+    "visualization",
+    "overlay",
+    "layer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uber/deck.gl.git"
+  },
+  "workspaces": [
+    "modules/*"
+  ],
+  "scripts": {
+    "bootstrap": "yarn && ocular-bootstrap",
+    "clean": "ocular-clean",
+    "build": "ocular-clean && ocular-build",
+    "version": "ocular-build core,main",
+    "lint": "ocular-lint",
+    "cover": "ocular-test cover",
+    "publish": "ocular-publish",
+    "start": "open http://uber.github.io/deck.gl/#/documentation/getting-started/installation?section=running-the-examples",
+    "test": "ocular-test",
+    "test-fast": "ocular-test fast",
+    "test-browser": "ocular-test browser",
+    "bench": "ocular-test bench",
+    "bench-browser": "ocular-test bench-browser",
+    "metrics": "ocular-metrics",
+    "link-luma": "yarn && (cd node_modules && mv luma.gl luma.orig && ln -s ../../luma.gl/modules/core)",
+    "unlink-luma": "(cd node_modules && mv luma.gl luma.ln && mv luma.orig luma.gl)",
+    "update-release-branch": "scripts/update-release-branch.sh"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@probe.gl/bench": "^3.0.1",
+    "@probe.gl/test-utils": "^3.0.1",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-inline-webgl-constants": "^1.0.0",
+    "babel-plugin-remove-glsl-comments": "^0.1.0",
+    "babel-preset-minify": "^0.5.0",
+    "coveralls": "^3.0.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-uber-jsx": "^3.3.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.10",
+    "gl": "^4.2.2",
+    "glsl-transpiler": "^1.8.3",
+    "ocular-dev-tools": "0.0.18",
+    "png.js": "^0.1.1",
+    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-map-gl": "^4.1.2",
+    "reify": "^0.18.1"
+  },
+  "pre-commit": [
+    "test-fast"
+  ]
+}

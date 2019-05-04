@@ -1,0 +1,31 @@
+{
+  "name": "@deck.gl/test-utils",
+  "description": "Test utilities for deck.gl layers",
+  "license": "MIT",
+  "version": "7.0.4",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "webgl",
+    "visualization",
+    "overlay",
+    "layer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uber/deck.gl.git"
+  },
+  "main": "dist/es5/index.js",
+  "module": "dist/esm/index.js",
+  "esnext": "dist/es6/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "@deck.gl/core": "^7.0.0-beta.1",
+    "@probe.gl/test-utils": "^3.0.1"
+  },
+  "scripts": {}
+}
