@@ -11,8 +11,7 @@ import DeckGL from '@deck.gl/react';
 const MAPBOX_TOKEN = process.env.MapboxAccessToken; // eslint-disable-line
 
 // Source data CSV
-const DATA_URL =
-  'https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv'; // eslint-disable-line
+const DATA_URL = 'heatmap-data.csv'; // eslint-disable-line
 
 const ambientLight = new AmbientLight({
   color: [255, 255, 255],
@@ -157,7 +156,7 @@ export class App extends Component {
             reuseMaps
             mapStyle="mapbox://styles/mapbox/dark-v9"
             preventStyleDiffing={true}
-            mapboxApiAccessToken={MAPBOX_TOKEN}
+            mapboxApiAccessToken={"pk.eyJ1IjoiZG9udXZpbiIsImEiOiJjanVmZHM0c2QwZGR1NGN1OTcycHRvdGN2In0.U4X-r-6FKWqt3nyQ-b6w_g"}
           />
         )}
       </DeckGL>
