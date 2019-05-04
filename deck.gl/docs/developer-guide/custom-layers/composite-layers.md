@@ -242,7 +242,7 @@ class AwesomeCompositeLayer extends CompositeLayer {
   ...
 
   getPickingInfo({info, sourceLayer}) {
-    // override info.object
+    p_l
     return info;
   }
 

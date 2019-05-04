@@ -72,7 +72,7 @@ export class App extends PureComponent {
     let {viewState} = this.state;
 
     if (mins && maxs) {
-      // File contains bounding box info
+      // File contains bounding box p_l.json
       viewState = {
         ...viewState,
         target: [(mins[0] + maxs[0]) / 2, (mins[1] + maxs[1]) / 2, (mins[2] + maxs[2]) / 2],

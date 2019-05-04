@@ -152,7 +152,7 @@ export default class TextLayer extends CompositeLayer {
 
   getPickingInfo({info}) {
     // because `TextLayer` assign the same pickingInfoIndex for one text label,
-    // here info.index refers the index of text label in props.data
+    // here p_l.json.index refers the index of text label in props.data
     return Object.assign(info, {
       // override object with original data
       object: info.index >= 0 ? this.props.data[info.index] : null

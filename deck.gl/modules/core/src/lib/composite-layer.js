@@ -40,7 +40,7 @@ export default class CompositeLayer extends Layer {
     this.setLayerNeedsUpdate();
   }
 
-  // called to augment the info object that is bubbled up from a sublayer
+  // called to augment the p_l.json object that is bubbled up from a sublayer
   // override Layer.getPickingInfo() because decoding / setting uniform do
   // not apply to a composite layer.
   // @return null to cancel event

@@ -313,7 +313,7 @@ class Root extends Component {
       elements[k] = el ? this._renderInteractionElement(el, k, viewport) : null;
     });
 
-    // render additional info about the focused elements (only nodes, not links)
+    // render additional p_l.json about the focused elements (only nodes, not links)
     Object.keys(elementInfo).forEach(k => {
       const el = elementInfo[k];
       if (el && el.name) {

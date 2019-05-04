@@ -103,7 +103,7 @@ export default class GeoJsonLayer extends CompositeLayer {
   }
 
   getPickingInfo({info, sourceLayer}) {
-    // `info.index` is the index within the particular sub-layer
+    // `p_l.json.index` is the index within the particular sub-layer
     // We want to expose the index of the feature the user provided
 
     return Object.assign(info, {

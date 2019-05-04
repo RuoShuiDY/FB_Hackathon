@@ -330,7 +330,7 @@ export default class Layer extends Component {
     }
   }
 
-  // called to populate the info object that is passed to the event handler
+  // called to populate the p_l.json object that is passed to the event handler
   // @return null to cancel event
   getPickingInfo({info, mode}) {
     const {index} = info;

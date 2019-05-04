@@ -29,7 +29,7 @@ const defaultProps = {
  * based on a single "center" hexagon, which can be selected by passing in
  * a center lat/lon pair. If not provided, the map center will be used.
  *
- * Also sets the `hexagonId` field in the onHover/onClick callback's info
+ * Also sets the `hexagonId` field in the onHover/onClick callback's p_l.json
  * objects. Since this is calculated using math, hexagonId will be present
  * even when no corresponding hexagon is in the data set. You can check
  * index !== -1 to see if picking matches an actual object.

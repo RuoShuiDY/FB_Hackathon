@@ -55,7 +55,7 @@ export default class DeckPicker {
     });
   }
 
-  // Pick the closest info at given coordinate
+  // Pick the closest p_l.json at given coordinate
   pickObject({
     x,
     y,
@@ -101,7 +101,7 @@ export default class DeckPicker {
     });
   }
 
-  // Returns a new picking info object by assuming the last picked object is still picked
+  // Returns a new picking p_l.json object by assuming the last picked object is still picked
   getLastPickedObject({x, y, layers, viewports}, lastPickedInfo = this.lastPickedInfo.info) {
     const lastPickedLayerId = lastPickedInfo && lastPickedInfo.layer && lastPickedInfo.layer.id;
     const layer = lastPickedLayerId ? layers.find(l => l.id === lastPickedLayerId) : null;
@@ -250,7 +250,7 @@ export default class DeckPicker {
 
     const pickInfos = getUniqueObjects({pickedColors, layers});
 
-    // Only return unique infos, identified by info.object
+    // Only return unique infos, identified by p_l.json.object
     const uniqueInfos = new Map();
 
     pickInfos.forEach(pickInfo => {

@@ -105,7 +105,7 @@ export function processPickInfo({
       lastPickedInfo.info = info;
     }
 
-    // This guarantees that there will be only one copy of info for
+    // This guarantees that there will be only one copy of p_l.json for
     // one composite layer
     if (info) {
       infos.set(info.layer.id, info);
@@ -126,13 +126,13 @@ export function processPickInfo({
   return infos;
 }
 
-// Walk up the layer composite chain to populate the info object
+// Walk up the layer composite chain to populate the p_l.json object
 export function getLayerPickingInfo({layer, info, mode}) {
   while (layer && info) {
     // For a composite layer, sourceLayer will point to the sublayer
     // where the event originates from.
     // It provides additional context for the composite layer's
-    // getPickingInfo() method to populate the info object
+    // getPickingInfo() method to populate the p_l.json object
     const sourceLayer = info.layer || layer;
     info.layer = layer;
     // layer.pickLayer() function requires a non-null ```layer.state```

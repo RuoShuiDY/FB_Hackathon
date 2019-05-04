@@ -184,7 +184,7 @@ export default class HexagonLayer extends CompositeLayer {
       );
     }
 
-    // add bin colorValue and elevationValue to info
+    // add bin colorValue and elevationValue to p_l.json
     return Object.assign(info, {
       picked: Boolean(object),
       // override object with picked cell

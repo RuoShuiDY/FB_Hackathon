@@ -1,8 +1,14 @@
+
+import os
 import json
 
 from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
+
+ROOT_PATH = "/Users/elfsong/PycharmProjects/FB"
+RESOURCE_PATH = os.path.join(ROOT_PATH, "resource")
+twitter_data = os.path.join(RESOURCE_PATH, "twitterdata.json")
 
 
 def cleanData(data):
@@ -18,7 +24,7 @@ def cleanData(data):
         if json_data['geo']['coordinates'] is not None:
             output["location"] = (json_data['geo']['coordinates'][0], json_data['geo']['coordinates'][1])
             print(output["location"])
-            with open('twitterdata.json', 'a') as outfile:
+            with open(twitter_data, 'a') as outfile:
                 outfile.write(json.dumps(output) + "\n")
             outfile.close()
             return
@@ -26,7 +32,7 @@ def cleanData(data):
     if json_data['coordinates'] is not None:
         output["location"] = (json_data['coordinates'][0], json_data['coordinates'][1])
         print(output["location"])
-        with open('twitterdata.json', 'a') as outfile:
+        with open(twitter_data, 'a') as outfile:
             outfile.write(json.dumps(output) + "\n")
         outfile.close()
         return

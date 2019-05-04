@@ -29,4 +29,4 @@ before_script:
 script:
   - npm run test ci
 after_success:
-  - cat coverage/lcov.info | coveralls
+  - cat coverage/lcov.p_l.json | coveralls
