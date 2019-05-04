@@ -40,11 +40,11 @@ const material = new PhongMaterial({
 });
 
 export const INITIAL_VIEW_STATE = {
-  longitude: -1.4157267858730052,
-  latitude: 52.232395363869415,
+  longitude: 144.90155334472656,
+  latitude: -37.820984280171785,
   zoom: 6.6,
   minZoom: 5,
-  maxZoom: 15,
+  maxZoom: 20,
   pitch: 40.5,
   bearing: -27.396674584323023
 };
